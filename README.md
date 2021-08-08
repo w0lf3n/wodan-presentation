@@ -1,4 +1,5 @@
-# Wodan Clone - Map Generator Demo
+# Wodan Clone
+Map Generator Demo
 
 
 ## Demo
