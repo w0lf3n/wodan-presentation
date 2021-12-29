@@ -7,12 +7,12 @@ const Movement = {
 
 const Terrain = [
 
-    {id: 1, name: "ocean", height: 0.3, move: Movement.SWIMMABLE, img: "res/graphics/ocean.png"},
-    {id: 2, name: "shore", height: 0.43, move: Movement.SWIMMABLE, img: "res/graphics/shore.png"}, // 0.43 sea level
-    {id: 3, name: "meadow", height: 0.55, move: Movement.WALKABLE, img: "res/graphics/meadow.png"},
-    {id: 4, name: "hillock", height: 0.6, move: Movement.WALKABLE, img: "res/graphics/hillock.png"},
-    {id: 5, name: "hills", height: 0.65, move: Movement.WALKABLE, img: "res/graphics/hills.png"},
-    {id: 6, name: "mountain", height: 1.0, move: Movement.IMPASSABLE, img: "res/graphics/mountain.png"}
+    {id: 0, name: "ocean", height: 0.3, move: Movement.SWIMMABLE},
+    {id: 1, name: "shore", height: 0.43, move: Movement.SWIMMABLE}, // 0.43 sea level
+    {id: 2, name: "meadow", height: 0.55, move: Movement.WALKABLE},
+    {id: 3, name: "hillock", height: 0.6, move: Movement.WALKABLE},
+    {id: 4, name: "hills", height: 0.65, move: Movement.WALKABLE},
+    {id: 5, name: "mountain", height: 1.0, move: Movement.IMPASSABLE}
 
 ];
 

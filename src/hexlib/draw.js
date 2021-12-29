@@ -1,43 +1,17 @@
 
 import {hexToPixel, polygonCorners} from "./core.js";
-import {Terrain} from "../generator/values.js";
 
-
-/**
- * @param {number} id
- *
- * @returns {HTMLImageElement}
- */
-const getTerrainImageById = (id) => {
-
-    let image = null;
-
-    const current = Terrain.find(terrain => terrain.id === id);
-    if (current) {
-        image = current.img;
-    }
-
-    return image;
-};
 
 /**
  * @param {CanvasRenderingContext2D} ctx
  * @param {*} layout
  * @param {*} shape
- * @param {number} terrainId
+ * @param {HTMLImageElement} tileImage
  */
-const drawShape = (ctx, layout, shape, terrainId) => {
+const drawShape = (ctx, layout, shape, tileImage) => {
 
-    const image = getTerrainImageById(terrainId);
     const corner = polygonCorners(layout, shape)[0];
-
-    // WORKAROUND
-    const testImage = new Image();
-    testImage.onload = function () {
-        console.log(testImage);
-        ctx.drawImage(testImage, corner.x - 60, corner.y - 46);
-    };
-    testImage.src = encodeURI(image);
+    ctx.drawImage(tileImage, corner.x - 60, corner.y - 46);
 
 };
 
